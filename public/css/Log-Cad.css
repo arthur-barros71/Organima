@@ -1,0 +1,295 @@
+/*----------------------------------------------------------Login e cadastro----------------------------------------------------------*/
+.register, .login {
+    position: absolute;
+    transition: none;
+}
+
+.register.email {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto; /* Ativa interações apenas na tela visível */
+    transition: all linear 0.5s;
+}
+
+.login .emsen {
+    transition: all linear 0.5s;
+}
+
+.login .forgot {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto; /* Ativa interações apenas na tela visível */
+    transition: all linear 0.5s;
+}
+
+.register.name {
+    transition: all linear 0.5s;
+}
+
+.register.senha {
+    transition: all linear 0.5s;
+}
+
+/* Ativar tela */
+.active {
+    opacity: 1 !important;
+    z-index: 2 !important;
+    pointer-events: auto !important;
+}
+
+/* Esconder tela */
+.hidden {
+    opacity: 0 !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+}
+
+.reg {
+    left: 7%;
+}
+
+.log {
+    right: 7%;
+}
+
+.body {
+    margin: 0; 
+    animation: gradient 3s infinite;
+    transition: all linear 3s;
+    background: rgb(195,195,195);
+    background: linear-gradient(0deg, rgba(195,195,195,1) 0%, rgb(241, 241, 241) 35%);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.center {
+    width: 100%; 
+    justify-content:center; 
+    height: 100vh; 
+    align-items:center;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.cad {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    width: 40%;
+    height: 90vh;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.link {
+    font-size: 17px;
+    border: none;
+    margin-top: 2vh;
+    text-align: center;
+    transition: all ease-in-out 0.1s;
+}
+
+.link:hover {
+    cursor: pointer;
+    color: #C83ED5;
+}
+
+.title {
+    display: flex; 
+    justify-content: center;
+    flex-direction:column; 
+}
+
+.titleText {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.subtitleText {
+    font-size: 25px;
+    margin: 1vh 0;
+}
+
+form {
+    padding-top:1vh; 
+    display:flex; 
+    flex-direction:column; 
+    width: 100%;
+}
+
+.inpName {
+    font-size: 30px;
+    margin: 0;
+}
+
+.top {
+    margin-top: 7%;
+}
+
+.inp {
+    margin: 0.7vh 0;
+    padding: 3%;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    background-color: #fffffffd;
+    box-shadow: 0px 0px 4.5px rgb(0, 0, 0, 0.25);
+}
+
+.inpSenha {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.7vh 0;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    background-color: #fffffffd;
+    box-shadow: 0px 0px 4.5px rgb(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.inpSenha input {
+    width: 90%;
+    padding: 3%;
+    margin: 0;
+    box-shadow: none;
+}
+
+.inpSenha img {
+    width: 7%;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
+}  
+
+.resp {
+    height: 52vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.require {
+    margin-top: 1vh;
+}
+
+.req {
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+
+.req img {
+    width: 3%;
+    margin-right: 2%;
+}
+
+.req p {
+    font-size: 17px;
+    font-weight: lighter;
+    margin: 1%;
+}
+
+.passtext {
+    font-size: 25px;
+}
+
+.confirm {
+    margin: 0;
+    margin-top: 3vh; 
+    padding: 3%;
+    font-size: 30px;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    transition: all ease-in-out 0.1s;
+    font-weight: bold;
+}
+
+
+.confirm:hover {
+    cursor: pointer;
+}
+
+ .confirme .titleText.font.titlefont {
+    font-size: 30px;
+}
+
+.subtitle.font.fontcorpo span {
+    font-weight: bold;
+}
+
+#verificationCode {
+    text-transform: uppercase;
+}
+
+.codeExpiraText {
+    font-size: 30px;
+    margin: 0;
+    text-align: center;
+    color: #14141B;
+}
+
+#code_sent {
+    width: 30%;
+}
+
+#resend_code {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #3E52D5;
+}
+
+#verification_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#verification_container input {
+    width: 15%;
+    padding: 3vh 2%;
+    font-size: 50px;
+    text-align: center;
+    font-family: monospace;
+    border-radius: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#verification_container input:disabled {
+    background-color: #f7f7f7fd;
+}
+
+.code-input {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+#code_sent_container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn_code {
+    width: 40%;
+    padding: 1%;
+}

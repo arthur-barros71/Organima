@@ -1,0 +1,9 @@
+*
+
+!proj_default/
+!proj_default/**
+
+!user_default/
+!user_default/**
+
+!.gitignore

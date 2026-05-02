@@ -1,0 +1,75 @@
+/*----------------------------------------------------------Imagem interativa----------------------------------------------------------*/
+.image {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: all ease-in-out 0.5s;
+    transform: translate(57vw);
+    overflow: hidden;
+    z-index: 500;
+    background-image: url('../image/png.jpg');
+    background-size: auto;
+    background-repeat: repeat;
+}
+
+#drag {
+    width: 200px;
+    height: 200px;
+    cursor: move;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    border: none;
+}
+
+/* Imagem */
+.gif {
+    width: 500px;
+    height: 500px;
+    cursor: move;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #00AAFF;
+}
+
+/* Redimensionamentos */
+.resize-handle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #00AAFF;
+    border-radius: 50%;
+    z-index: 1001;
+}
+
+/* Posicionamento nos cantos da imagem */
+.top-left {
+    top: -7px;
+    left: -7px;
+    cursor: nwse-resize;
+}
+
+.top-right {
+    top: -7px;
+    right: -7px;
+    cursor: nesw-resize;
+}
+
+.bottom-left {
+    bottom: -7px;
+    left: -7px;
+    cursor: nesw-resize;
+}
+
+.bottom-right {
+    bottom: -7px;
+    right: -7px;
+    cursor: nwse-resize;
+}

@@ -1,0 +1,219 @@
+/* Estilo para o campo selecionado */
+.select2-container--default .select2-selection--single {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #fdfdfd url('data:image/svg+xml;utf8,<svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M41 20L23.75 6.14359L23.75 33.8564L41 20Z" fill="%2314141B"/></svg>') no-repeat right 10px center;
+    background-size: 20px 20px;
+    padding-right: 30px !important; /* Ajuste para dar mais espaço ao ícone */
+    border: none;
+    width: 100%;
+    padding: 0.5vh 2%;
+    margin: 0;
+    border-radius: 10px;
+    height: 35px;
+}
+
+/* Estilo para o campo selecionado no foco */
+.select2-container--default .select2-selection--single:focus {
+    outline: none;
+    background: #fdfdfd url('data:image/svg+xml;utf8,<svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27 31.5L40.8564 14.25H13.1436L27 31.5Z" fill="%2314141B"/></svg>') no-repeat right 10px center;
+    background-size: 20px 20px;
+}
+
+/* Estilo para o dropdown do select2 */
+.select2-container--default .select2-dropdown {
+    background-color: #fdfdfd;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: auto;
+}
+
+/* Estilo para as opções dentro do dropdown */
+.select2-container--default .select2-results__option {
+    padding: 10px;
+}
+
+/* Estilo quando o item do dropdown é selecionado */
+.select2-container--default .select2-results__option--highlighted {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* Remove o ícone padrão do select2 */
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    display: none;
+}
+
+/* Garante que o ícone personalizado será exibido */
+.select2-container--default .select2-selection--single {
+    background: #fdfdfd url('data:image/svg+xml;utf8,<svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M41 20L23.75 6.14359L23.75 33.8564L41 20Z" fill="%2314141B"/></svg>') no-repeat right 10px center;
+    background-size: 20px 20px;
+    padding-right: 30px !important; /* Ajuste o espaço para garantir que o ícone não seja sobreposto */
+}
+
+/* Remove o ícone de "x" (limpar) do Select2 */
+.select2-container--default .select2-selection--single .select2-selection__clear {
+    display: none;
+}
+
+.Editor {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Editor_Left {
+    margin-top: 1vh;
+    width: 60%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.Editor_Left p, .Editor_Right p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.Editor_Left button {
+    width: 19%;
+    margin-right: 4%;
+}
+
+.Editor_Right button {
+    width: 33%;
+    margin-left: 7%;
+}
+
+.Editor_Right button, .Editor_Left button {
+    height: 4vh;
+    border-radius: 10px;
+    border: none;
+    background-color: #EBEBEB;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.Editor_Right button:hover, .Editor_Left button:hover {
+    filter: brightness(0.9);
+}
+
+.Editor_row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 1vh 0;
+}
+
+.Editor_row_right {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 1vh 0;
+    justify-content: right;
+}
+
+#font, #fontSize {
+    border: none;
+    width: 100%;
+    padding: 1vh 2%;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.Editor_Right {
+    margin-top: 1vh;
+    width: 35%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.scrollTextArea {
+    width: 94%;
+    height: 93vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 3%;
+    padding-left: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Barra de rolagem*/
+.scrollTextArea::-webkit-scrollbar {
+    width: 10px; 
+    height: 15px;
+}
+
+.scrollTextArea::-webkit-scrollbar-track {
+    background: #D6D6D6; 
+    border-radius: 5px;
+}
+
+.scrollTextArea::-webkit-scrollbar-thumb {
+    background:  #F6F6F6; 
+    border-radius: 5px;
+    border: solid 2px #D6D6D6;
+}
+
+.scrollTextArea::-webkit-scrollbar-thumb:hover {
+    background: #dfdfdf; 
+}
+
+.scrollTextArea::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.textArea {
+    padding: 5vh 5%;
+    border: 1px solid #dbdbdb;
+    width: 794px;
+    min-height: 10vh;
+    border-radius: 10px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    background-color: #FDFDFD;
+    overflow: hidden;
+    overscroll-behavior: none;
+    word-wrap: break-word;
+    min-height: unset; /* IMPORTANTE */
+    max-height: unset; /* IMPORTANTE */
+    white-space: pre-wrap;
+    outline: none;
+    line-height: 1.6;
+    flex-shrink: 0;
+}
+
+#textArea:focus {
+    outline: none;
+}
+
+input[type="color"] {
+    margin: 5px;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    padding: 3px;
+    width: 50px;
+}
+
+#textColor {
+    background-color: #000; /* Cor inicial para texto */
+    color: #fff;
+    border-radius: 100px;
+}
+
+#bgColor {
+    background-color: #fff; /* Cor inicial para fundo */
+    color: #000;
+    border-radius: 100px;
+}
+
+button.active {
+    background-color: #555e66; /* azul */
+    color: white;
+}

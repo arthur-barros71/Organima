@@ -1,0 +1,957 @@
+.centerBegin {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #FDFDFD;
+    scroll-behavior: smooth;    
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    box-shadow: 0px 0.2vh 10px rgb(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 100;
+    background-color: #FDFDFD;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease; /* Transição suave */
+}
+
+.hiddenHeader {
+    transform: translateY(-100%); /* Esconde o header ao mover para cima */
+}
+
+.headLeft, .headRight {
+    width: 50%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: row;
+}
+
+.headRight {
+    justify-content: end;
+}
+
+.headLeft img {
+    width: 10%;
+    margin-left: 3%;
+}
+
+.BeginPages {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 7%;
+}
+
+.BeginPagesText {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.BeginPagesText p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.BeginPagesText p:hover {
+    cursor: pointer;
+}
+
+.BeginPageLine {
+    width: 28%;
+    background-color: #14141B;
+    height: 0.3vh;
+    margin-top: 0.3vh;
+    transition: all ease-in-out 0.3s;
+}
+
+.btn_go_log {
+    width: 17%;
+    background-color: #14141B;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 5vh;
+    margin-right: 3%;
+    transition: all linear 0.3s;
+    font-size: 20px;
+}
+
+.btn_go_log:hover {
+    cursor: pointer;
+    background-color: #3E52D5;
+}
+
+.btn_go_cad {
+    width: 21%;
+    background-color: #14141B;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 5vh;
+    margin-right: 3%;
+    transition: all linear 0.3s;
+    font-size: 20px;
+}
+
+.btn_go_cad:hover {
+    cursor: pointer;
+    background-color: #C83ED5;
+}
+
+.btn_go_cad p, .btn_go_log p {
+    margin: 0;
+}
+
+/*-------------------------------------------------------Páginas (Geral)-------------------------------------------------------*/
+.PageIni, .PageSobreNos, .PageContato {
+    transition: all linear 0.5s;
+    position: relative;
+}
+
+/*-------------------------------------------------------Página inicial-------------------------------------------------------*/
+
+body {
+    margin: 0;
+    background-color: #FDFDFD;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.logo-sobre {
+    opacity: 0;
+    transform: translateY(5vh);
+    transition: all 1s ease-in-out;
+}
+
+.logo-sobre.scrolled { 
+    opacity: 1;
+    transform: translateY(0vh);
+}
+
+.Bem-vindo {
+    width: 100%;
+    margin-top: 12vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5vh;
+    text-align: center;
+}
+
+.BigTitle {
+    font-size: 55px;
+    font-weight: bolder;
+    margin-bottom: 0;
+    width: 50%;
+    opacity: 0;
+    transform: translateY(5vh);
+    transition: all 0.5s ease-in-out;
+}
+
+.BigTitle.scrolled { 
+    opacity: 1;
+    transform: translateY(0vh);
+}
+
+.TextIni {
+    font-size: 25px;
+    width: 70%;
+    opacity: 0;
+    transform: translateY(5vh);
+    transition: all 0.5s ease-in-out;
+}
+
+.TextIni.scrolled { 
+    opacity: 1;
+    transform: translateY(0vh);
+}
+
+.Text.scrolled { 
+    opacity: 1;
+    transform: translateY(0vh);
+}
+
+.Bem-vindo img {
+    width: 50%;
+    margin-top: 0vh;
+}
+
+.linha {
+    margin: 6vh 0 6vh 0;
+    background-color: rgb(0, 0, 0, 0.3);
+    width: 90%;
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5vh;
+}
+
+.importVideoImg { 
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all 1s ease-in-out;
+}
+
+.importVideoImg.scrolled { 
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.errorIdentify {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 1s ease-in-out;
+}
+
+.errorIdentify.scrolled {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.contQuali {
+    opacity: 0;
+    transform: translateY(20vh);
+    transition: all 1s ease-in-out;
+}
+
+.contQuali.scrolled {
+    opacity: 1;
+    transform: translateY(0vh);
+}
+
+.margin {
+    width: 90%;
+}
+
+.rowBegin {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5vh;
+}
+
+.secL .secR {
+    text-align: left;
+}
+
+.secL {
+    width: 100%;
+    margin-right: 5%;
+}
+
+.secR {
+    display: flex;
+    justify-content: right;
+}
+
+.secR img {
+    width: 80%;
+}
+
+.BigTitle1 {
+    font-size: 55px;
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+
+.Text1 {
+    font-size: 35px;
+}
+
+.row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.secL1 {
+    width: 75%;
+    margin-left: 5%;
+}
+
+.secLeft, .secCenter, .secRight {
+    width: 33%;
+}
+
+.secLeft {
+    text-align: end;
+}
+
+.secCenter {
+    display: flex;
+    justify-content: center;
+}
+
+.secCenter img {
+    width: 70%;
+}
+
+.top {
+    margin-top: 10vh;
+}
+
+.textMargin {
+    margin-top: 40%;
+}
+
+.Compartilhar {
+    width: 100%;
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5vh;
+    text-align: center;
+}
+
+.Compartilhar img {
+    width: 50%;
+    margin-top: 0vh;
+}
+
+.comp {
+    width: 80%;
+}
+
+/*------------------------------Sobre nós------------------------------------*/
+.SobreBigTitle {
+    font-size: 75px;
+    font-weight: bolder;
+    margin-bottom: 0;
+    margin-top: 5vh;
+}
+
+.SobreBigTitle1 {
+    font-size: 75px;
+    font-weight: bolder;
+    margin-bottom: 0;
+    margin-top: 5vh;
+}
+
+.logo-sobre-nos {
+    opacity: 0;
+    transform: translateY(20vh);
+    transition: all 1s ease-in-out;
+}
+
+.logo-sobre-nos.scrolled {
+    opacity: 1;
+    transform: translateY(0vh);
+}
+
+.rowBeginCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.Sobre {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 17vh;
+    justify-content: center;
+}
+
+.secSobre {
+    display: flex;
+    flex-direction: column;
+}
+
+.SobreText {
+    font-size: 40px;
+}
+
+.SobreText1 {
+    font-size: 40px;
+}
+
+.SobreBigTitle {
+    opacity: 0;
+    transform: translateY(10vh);
+    transition: all 0.8s ease-in-out;
+}
+
+.SobreBigTitle.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.SobreText {
+    opacity: 0;
+    transform: translateY(10vh);
+    transition: all 1s ease-in-out;
+}
+
+.SobreText.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Sobre img {
+    width: 20%;
+    margin-top: 0vh;
+    margin-right: 10%;
+    margin-left: 5%;
+}
+
+.linha {
+    margin: 6vh 0 6vh 0;
+    background-color: rgb(0, 0, 0, 0.3);
+    width: 90%;
+}
+
+.Obj {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transform: translateX(60%);
+    transition: all 1s ease-in-out;
+}
+
+.Obj.scrolled {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.Obj img {
+    width: 35%;
+    margin-top: 0vh;
+    margin-left: 10%;
+}
+
+.Questions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.secQuest {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.BigTitleQuest {
+    font-size: 75px;
+    font-weight: bolder;
+    margin-bottom: 0;
+    margin-top: 5vh;
+    margin-bottom: 7vh;
+
+    opacity: 0;
+    transform: translateY(5vh);
+    transition: all 0.5s ease-in-out;
+}
+
+.BigTitleQuest.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Quest, .Quest1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 1vh;
+
+    opacity: 0;
+    transform: translateY(7vh);
+    transition: all 0.7s ease-in-out;
+}
+
+.Quest.scrolled, .Quest1.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.TextQuest, .TextQuest1 {
+    font-size: 30px;
+    margin-bottom: 5vh;
+
+    opacity: 0;
+    transform: translateY(7vh);
+    transition: all 1s ease-in-out;
+}
+
+.TextQuest.scrolled, .TextQuest1.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.VisVal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.secVis .secVal {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vis {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all 1s ease-in-out;
+}
+
+.vis.scrolled {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.val {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 1s ease-in-out;
+}
+
+.val.scrolled {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.valImg {
+    margin-right: 5%;
+}
+
+.ODS {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ODS {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 1s ease-in-out;
+}
+
+.ODS.scrolled {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.secODS {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ods_img {
+    margin-right: 5%;
+}
+
+.vis1 {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all 1s ease-in-out;
+}
+
+.vis1.scrolled {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.val1 {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 1s ease-in-out;
+}
+
+.val1.scrolled {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.SobrePerfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    flex-wrap: wrap;
+    margin: auto 4% auto 4%;
+}
+
+.SobrePerfil img {
+    width: 80%;
+}
+
+.perfis {
+    width: 90%;
+}
+
+.Equipe {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10vh;
+}
+
+.BeginContainer {
+    position: relative;
+    height: 50vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BeginContainer p {
+    font-size: 35px;
+    margin-top: 40vh;
+}
+
+.BeginContainer:hover .flip {
+    transform: rotateY(180deg);
+}
+
+.flip {
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+
+.frente, .trás {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.trás {
+    transform: rotateY(180deg);
+}
+
+/*------------------------------Entre em contato------------------------------------*/
+.ContBigTitle {
+    font-size: 75px;
+    font-weight: bolder;
+    margin-bottom: 0;
+    margin-top: 5vh;
+}
+
+.ContText {
+    font-size: 40px;
+}
+
+.ContText {
+    opacity: 0;
+    transform: translateY(10vh);
+    transition: all 1s ease-in-out;
+}
+
+.ContText.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ContBigTitle {
+    opacity: 0;
+    transform: translateY(10vh);
+    transition: all 0.8s ease-in-out;
+}
+
+.ContBigTitle.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ContImg {
+    opacity: 0;
+    transform: translateY(10vh);
+    transition: all 1s ease-in-out;
+}
+
+.ContImg.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Intro {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15vh;
+}
+
+.rowBeginCenter2 {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+}
+
+.Intro img {
+    width: 30%;
+}
+
+.BigTitle {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.Text {
+    font-size: 40px;
+}
+
+.Enviar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5vh;
+}
+
+.BeginForm {
+    width: 75%;
+}
+
+.input {
+    width: 100%;
+    font-size: 25px;
+    padding: 1%;
+    border-radius: 10px;
+    border: solid 2px #5A6C7D;
+    margin-bottom: 2vh;
+}
+
+.inpText {
+    font-size: 25px;
+    margin-bottom: 1vh;
+    display: flex;
+}
+
+.req {
+    color: #8C2E2E;
+}
+
+.inputMessage {
+    width: 100%;
+    font-size: 25px;
+    padding: 1%;
+    border-radius: 10px;
+    border: solid 2px #5A6C7D;
+    margin-bottom: 5vh;
+    height: 25vh;
+}
+
+.centerCtt {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btns {
+    width: 80%;
+    margin-bottom: 10vh;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Send {
+    background-color: #14141B;
+    color: #FDFDFD;
+    border: none;
+    font-size: 20px;
+    width: 30%;
+    height: 7vh;
+    border-radius: 20px;
+    transition: all 0.5s;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Send:hover {
+    cursor: pointer;
+    background-color: #3E52D5;
+}
+
+.Cancel {
+    background-color: #89898C;
+    color: #FDFDFD;
+    border: none;
+    padding: 1%;
+    font-size: 20px;
+    width: 30%;
+    height: 7vh;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.Cancel:hover {
+    cursor: pointer;
+    background-color: #D53E41;
+}
+
+.Enviado {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+
+.TextEnviado {
+    color: #3ED582;
+    font-size: 65px;
+}
+
+.envImg {
+    width: 40%;
+}
+
+.env {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*---------------------------------------------Footer----------------------------------------------------------*/
+.foot {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #14141B;
+    color: #FDFDFD;
+}
+
+.rowSpcBtw {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    padding: 3% 0 1% 0;
+}
+
+.FotTitle {
+    font-size: 30px;
+    border-bottom: solid 1px white;
+    padding-bottom: 2%;
+    font-weight: bold;
+    margin-bottom: 10%;
+}
+
+.FotTitle:hover {
+    cursor: pointer;
+}
+
+.FotItem {
+    margin: 7% 0 2% 0;
+    text-decoration: none;
+    color: #FDFDFD;
+}
+
+.FotItem:hover {
+    cursor: pointer;
+}
+
+.redeSocial {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rede {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rede img {
+    width: 80%;
+}
+
+.left {
+    margin-left: 20%;
+}
+
+.whiteLine {
+    width: 90%;
+    background-color: #FDFDFD;
+}
+
+.foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-direitos {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 0 2% 0;
+}
+
+.logo-direitos img {
+    width: 5%;
+}
+
+.SobrePerfil {
+    width: 100%;
+}
+
+.frente a, .tras a  {
+    width: 70%;
+}
+
+.BeginContainer {
+    margin-bottom: 10vh;
+}
+
+@media(max-width: 1600px) {
+
+    .BeginPagesText p {
+        font-size: 17px;
+    }
+
+    .BeginContainer p {
+        margin-top: 50vh;
+    }
+
+}

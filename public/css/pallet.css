@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.titlefont {
+    font-family: "Poppins", sans-serif;
+}
+
+.fontcorpo {
+    font-family: "Quattrocento Sans";
+}
+
+.button-normal {
+    background-color: #14141B;
+    color: #FDFDFD;
+}
+
+.btnDisabled {
+    position: relative;
+    background-color: #39393f;
+    color: #b3adad;
+    pointer-events: none;
+    cursor: not-allowed;
+    overflow: hidden;
+}
+
+.btnDisabled::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    display: block;
+    background: linear-gradient(90deg, #3649c2, #3E52D5);
+    z-index: 10;
+    animation: loadingLine 1s linear infinite;
+}
+
+@keyframes loadingLine {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0%;
+    left: 100%;
+  }
+}
+
+.button-normal:hover {
+    background-color: #3E52D5;
+    color: #FDFDFD;
+}
+
+.font {
+    color: #14141B;
+}
+
+.font_medium {
+    font-weight: 550;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+.white-text {
+    color: #FDFDFD;
+}
+
+.red-text {
+    color: #D53E41;
+}
+
+.background {
+    background-color: #FDFDFD;
+}
+
+.back-black {
+    background-color: #14141B;
+}
+
+.back-light-black {
+    background-color: #202026;
+}
+
+.back-green {
+    background-color: #3ED582;
+}
+
+.back-red {
+    background-color: #D53E41;
+}
+
+.back-yel {
+    background-color: #D5B73E;
+}
